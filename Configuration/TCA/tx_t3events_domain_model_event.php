@@ -59,21 +59,23 @@ return [
         ],
 	],
 	'columns' => [
-		'sys_language_uid' => [
-			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.language',
-			'config' => [
-				'type' => 'select',
+        'sys_language_uid' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
+            'config' => [
+                'type' => 'select',
                 'renderType' => 'selectSingle',
-				'foreign_table' => 'sys_language',
-				'foreign_table_where' => 'ORDER BY sys_language.title',
-				'items' => [
-					['LLL:EXT:lang/locallang_general.xml:LGL.allLanguages', -1],
-					['LLL:EXT:lang/locallang_general.xml:LGL.default_value', 0]
-				],
-				'showIconTable' => TRUE,
-			],
-		],
+                'special' => 'languages',
+                'items' => [
+                    [
+                        'LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages',
+                        -1,
+                        'flags-multiple'
+                    ],
+                ],
+                'default' => 0,
+            ]
+        ],
 		'l10n_parent' => [
 			'displayCond' => 'FIELD:sys_language_uid:>:0',
 			'exclude' => 1,
@@ -102,39 +104,40 @@ return [
 				'max' => 255,
 			]
 		],
-		'hidden' => [
-			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
-			'config' => [
-				'type' => 'check',
-			],
-		],
-		'starttime' => [
-			'exclude' => 1,
-			'l10n_mode' => 'mergeIfNotBlank',
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
-			'config' => [
-				'type' => 'input',
-				'size' => 10,
-				'max' => 20,
-				'eval' => 'datetime',
-				'checkbox' => 0,
-				'default' => 0,
-			],
-		],
-		'endtime' => [
-			'exclude' => 1,
-			'l10n_mode' => 'mergeIfNotBlank',
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
-			'config' => [
-				'type' => 'input',
-				'size' => 10,
-				'max' => 20,
-				'eval' => 'datetime',
-				'checkbox' => 0,
-				'default' => 0,
-			],
-		],
+        'hidden' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
+            'config' => [
+                'type' => 'check',
+            ]
+        ],
+        'starttime' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'eval' => 'datetime',
+                'default' => 0
+            ],
+            'l10n_mode' => 'exclude',
+            'l10n_display' => 'defaultAsReadonly'
+        ],
+        'endtime' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'eval' => 'datetime',
+                'default' => 0,
+                'range' => [
+                    'upper' => mktime(0, 0, 0, 1, 1, 2038)
+                ]
+            ],
+            'l10n_mode' => 'exclude',
+            'l10n_display' => 'defaultAsReadonly'
+        ],
 		'fe_group' => [
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.fe_group',
@@ -491,24 +494,26 @@ return [
 		'new_until' => [
 			'exclude' => 1,
 			'label' => $ll . 'tx_t3events_domain_model_event.new_until',
-			'config' => [
-				'type' => 'input',
-				'size' => '10',
-				'max' => '20',
-				'eval' => 'datetime',
-				'default' => '0'
-			]
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'eval' => 'datetime',
+                'default' => 0
+            ],
+            'l10n_mode' => 'exclude',
+            'l10n_display' => 'defaultAsReadonly'
 		],
 		'archive_date' => [
 			'exclude' => 1,
 			'label' => $ll . 'tx_t3events_domain_model_event.archive_date',
-			'config' => [
-				'type' => 'input',
-				'size' => '10',
-				'max' => '20',
-				'eval' => 'date',
-				'default' => '0'
-			]
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'eval' => 'date',
+                'default' => 0
+            ],
+            'l10n_mode' => 'exclude',
+            'l10n_display' => 'defaultAsReadonly'
 		],
 	],
 ];

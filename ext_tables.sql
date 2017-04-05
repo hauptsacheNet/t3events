@@ -48,6 +48,7 @@ CREATE TABLE tx_t3events_domain_model_event (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid),
@@ -104,6 +105,7 @@ CREATE TABLE tx_t3events_domain_model_genre (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid),
@@ -146,6 +148,7 @@ CREATE TABLE tx_t3events_domain_model_eventtype (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid),
@@ -206,6 +209,7 @@ CREATE TABLE tx_t3events_domain_model_performance (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid),
@@ -247,6 +251,7 @@ CREATE TABLE tx_t3events_domain_model_venue (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid),
@@ -296,6 +301,7 @@ CREATE TABLE tx_t3events_domain_model_eventlocation (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid),
@@ -342,6 +348,7 @@ CREATE TABLE tx_t3events_domain_model_ticketclass (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid),
@@ -384,6 +391,7 @@ CREATE TABLE tx_t3events_domain_model_organizer (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid),
@@ -426,6 +434,7 @@ CREATE TABLE tx_t3events_domain_model_performancestatus (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid),
@@ -515,6 +524,7 @@ CREATE TABLE tx_t3events_domain_model_task (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid),
@@ -554,6 +564,7 @@ CREATE TABLE tx_t3events_domain_model_persontype (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
 
 	PRIMARY KEY (uid)
 );
@@ -602,6 +613,8 @@ CREATE TABLE tx_t3events_domain_model_person (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
+
 	images int(11) unsigned DEFAULT '0' NOT NULL,
 
 	PRIMARY KEY (uid)
@@ -652,6 +665,7 @@ CREATE TABLE tx_t3events_domain_model_audience (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid),
@@ -749,6 +763,7 @@ CREATE TABLE tx_t3events_domain_model_company (
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
+	l10n_state TEXT,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid),

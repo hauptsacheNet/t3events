@@ -66,7 +66,7 @@
           <settings.showRadiusSearch>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xlf:flexforms_general.showRadiusSearch</label>
-              <displayCond>FIELD:switchableControllerActions:=:Event->quickMenu</displayCond>
+              <!-- <displayCond>FIELD:switchableControllerActions:=:Event->quickMenu</displayCond> -->
               <config>
                 <type>check</type>
                 <default>0</default>
@@ -77,7 +77,7 @@
           <settings.showSearchField>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xlf:flexforms_general.showSearchField</label>
-              <displayCond>FIELD:switchableControllerActions:=:Event->quickMenu</displayCond>
+              <!-- <displayCond>FIELD:switchableControllerActions:=:Event->quickMenu</displayCond> -->
               <config>
                 <type>check</type>
                 <default>1</default>
@@ -88,7 +88,7 @@
           <settings.order>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.sortBy</label>
-              <displayCond>FIELD:switchableControllerActions:!=:Event->quickMenu</displayCond>
+              <!-- <displayCond>FIELD:switchableControllerActions:!=:Event->quickMenu</displayCond> -->
               <config>
                 <type>select</type>
                 <items type="array">
@@ -113,7 +113,7 @@
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.viewMode</label>
               <onChange>reload</onChange>
-              <displayCond>FIELD:switchableControllerActions:=:Performance->calendar</displayCond>
+              <!-- <displayCond>FIELD:switchableControllerActions:=:Performance->calendar</displayCond> -->
               <config>
                 <type>select</type>
                 <items>
@@ -132,12 +132,12 @@
           <settings.displayPeriod>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.displayPeriod</label>
-              <displayCond>
+              <!-- <displayCond>
                 <AND>
                   <numIndex index="0">FIELD:switchableControllerActions:=:Performance->calendar</numIndex>
                   <numIndex index="1">FIELD:settings.viewMode:=:1</numIndex>
                 </AND>
-              </displayCond>
+              </displayCond> -->
               <config>
                 <type>select</type>
                 <items>
@@ -169,7 +169,7 @@
           <settings.ajaxEnabled>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.ajaxEnabled</label>
-              <displayCond>FIELD:switchableControllerActions:=:Performance->calendar</displayCond>
+              <!-- <displayCond>FIELD:switchableControllerActions:=:Performance->calendar</displayCond> -->
               <config>
                 <type>check</type>
               </config>
@@ -179,7 +179,7 @@
           <settings.showCalendarNavigation>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.showCalendarNavigation</label>
-              <displayCond>FIELD:switchableControllerActions:=:Performance->calendar</displayCond>
+              <!-- <displayCond>FIELD:switchableControllerActions:=:Performance->calendar</displayCond> -->
               <config>
                 <type>check</type>
               </config>
@@ -189,7 +189,7 @@
           <settings.maxItems>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.maxItems</label>
-              <displayCond>FIELD:switchableControllerActions:!=:Event->quickMenu</displayCond>
+              <!-- <displayCond>FIELD:switchableControllerActions:!=:Event->quickMenu</displayCond> -->
               <config>
                 <type>input</type>
                 <size>3</size>
@@ -261,7 +261,7 @@
           <settings.period>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.period</label>
-              <displayCond>FIELD:switchableControllerActions:!=:Event->quickMenu</displayCond>
+              <!-- <displayCond>FIELD:switchableControllerActions:!=:Event->quickMenu</displayCond> -->
               <onChange>reload</onChange>
               <config>
                 <type>select</type>
@@ -298,7 +298,7 @@
           <settings.respectEndDate>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.respectEndDate</label>
-              <displayCond>FIELD:settings.period:!=:all</displayCond>
+              <!-- <displayCond>FIELD:settings.period:!=:all</displayCond> -->
               <onChange>reload</onChange>
               <config>
                 <type>check</type>
@@ -310,7 +310,7 @@
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.constraintBy</label>
               <onChange>reload</onChange>
-              <displayCond>FIELD:settings.period:=:specific</displayCond>
+              <!-- <displayCond>FIELD:settings.period:=:specific</displayCond> -->
               <config>
                 <type>radio</type>
                 <items type="array">
@@ -337,12 +337,12 @@
           <settings.periodStart>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.start</label>
-              <displayCond>
+              <!-- <displayCond>
                 <AND>
                   <numIndex index="0">FIELD:settings.period:=:specific</numIndex>
                   <numIndex index="1">FIELD:settings.periodType:!=:byDate</numIndex>
                 </AND>
-              </displayCond>
+              </displayCond> -->
               <config>
                 <type>input</type>
                 <size>1</size>
@@ -357,12 +357,12 @@
           <settings.periodDuration>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.duration</label>
-              <displayCond>
+              <!-- <displayCond>
                 <AND>
                   <numIndex index="0">FIELD:settings.period:=:specific</numIndex>
                   <numIndex index="1">FIELD:settings.periodType:!=:byDate</numIndex>
                 </AND>
-              </displayCond>
+              </displayCond> -->
               <config>
                 <size>3</size>
                 <range>
@@ -378,7 +378,7 @@
           <settings.periodStartDate>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.start</label>
-              <displayCond>FIELD:settings.periodType:=:byDate</displayCond>
+              <!-- <displayCond>FIELD:settings.periodType:=:byDate</displayCond> -->
               <config>
                 <type>input</type>
                 <size>8</size>
@@ -390,7 +390,7 @@
           <settings.periodEndDate>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.end</label>
-              <displayCond>FIELD:settings.periodType:=:byDate</displayCond>
+              <!-- <displayCond>FIELD:settings.periodType:=:byDate</displayCond> -->
               <config>
                 <type>input</type>
                 <size>8</size>
@@ -403,7 +403,7 @@
           <settings.quickMenuType>
             <TCEforms>
               <label>LLL:EXT:t3events/Resources/Private/Language/locallang_be.xml:flexforms_general.quick_menu.type</label>
-              <displayCond>FIELD:switchableControllerActions:=:Event->quickMenu</displayCond>
+              <!-- <displayCond>FIELD:switchableControllerActions:=:Event->quickMenu</displayCond> -->
               <onChange>reload</onChange>
               <config>
                 <type>select</type>

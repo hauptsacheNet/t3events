@@ -25,6 +25,7 @@ plugin.tx_t3events {
     features {
         # uncomment the following line to enable the new Property Mapper.
         # rewrittenPropertyMapper = 1
+        requireCHashArgumentForActionArguments = 0
     }
 }
 

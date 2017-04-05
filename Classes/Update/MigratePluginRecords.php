@@ -168,4 +168,9 @@ class MigratePluginRecords extends AbstractUpdate
 
         return $settings;
     }
+
+    protected function getDatabaseConnection()
+    {
+        return $GLOBALS['TYPO3_DB'];
+    }
 }

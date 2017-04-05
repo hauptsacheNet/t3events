@@ -39,12 +39,12 @@ return [
 				'max' => 255,
             ]
         ],
-		'hidden' => [
-			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
-			'config' => [
-				'type' => 'passthrough',
-            ],
+        'hidden' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
+            'config' => [
+                'type' => 'check',
+            ]
         ],
 		'recipient' => [
 			'exclude' => 1,
@@ -119,13 +119,14 @@ return [
 		'sent_at' => [
 			'exclude' => 1,
 			'label' => $ll . 'tx_t3events_domain_model_notification.send_at',
-			'config' => [
-				'type' => 'input',
-				'readOnly' => '1',
-				'size' => 7,
-				'default' => '0',
-				'eval' => 'datetime'
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'eval' => 'datetime',
+                'default' => 0
             ],
+            'l10n_mode' => 'exclude',
+            'l10n_display' => 'defaultAsReadonly'
         ],
     ],
 ];

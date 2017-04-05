@@ -136,4 +136,10 @@ class MigrateTaskRecords extends AbstractUpdate
         return $tasks;
     }
 
+    protected function getDatabaseConnection()
+    {
+        return $GLOBALS['TYPO3_DB'];
+    }
+
+
 }
